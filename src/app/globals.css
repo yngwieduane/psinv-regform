@@ -24,3 +24,48 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* === Phone field container to match your dark inputs === */
+.PhoneField{
+  display:flex;
+  align-items:center;
+  height:48px;                 /* h-12 */
+  padding:0 12px;              /* px-3 */
+  border-radius:8px;           /* rounded-md */
+  background: rgba(255,255,255,0.10);
+  border:1px solid rgba(255,255,255,0.10);
+}
+.PhoneField:focus-within{
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.25);
+  border-color: rgba(255,255,255,0.25);
+}
+.PhoneField .PhoneInputCountry{
+  display:flex; align-items:center; justify-content:center;
+  margin-right:10px;
+}
+.PhoneField .PhoneInputCountrySelect{ outline: none; }
+.PhoneField .PhoneInputCountryIcon{
+  width:20px !important; height:20px !important;
+  border-radius:3px;
+  box-shadow:none !important;
+  background:none !important;
+}
+.PhoneField .PhoneInputCountrySelectArrow{
+  margin-left:4px; opacity:.6;
+}
+
+.PhoneField .PhoneInputInput{
+  flex:1;
+  height:100%;
+  border:0; outline:0;
+  padding:0;
+  background:transparent;
+  color:#fff; caret-color:#fff;
+  font-size:14px;
+}
+.PhoneField .PhoneInputInput::placeholder{
+  color: rgba(255,255,255,0.50);
+}
+
+.PhoneField input[type="number"]::-webkit-outer-spin-button,
+.PhoneField input[type="number"]::-webkit-inner-spin-button{ -webkit-appearance:none; margin:0; }
+.PhoneField input[type="number"]{ -moz-appearance:textfield; }

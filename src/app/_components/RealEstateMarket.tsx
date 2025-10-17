@@ -5,10 +5,10 @@ import { FaPlay } from "react-icons/fa"
 export default function RealEstateMarket() {
 
     return(
-        <div className="mx-auto container px-10 my-5">
-            <h2 className="text-xl md:text-6xl font-bold text-[#272963] my-10">Abu Dhabi Real Estate Market 2025</h2>
-            <p className="text-normal font-semibold text-[#E35F27]">Government-Backed Verification For Real Estate Listings</p>
-            <h3 className="text-5xl font-bold text-[#272963] my-5">Madhmoun (مضمون)</h3>
+        <div className="mx-auto container px-10 my-5 pb-5">
+            <h2 className="text-3xl md:text-7xl font-semibold text-[#272963] my-10">Abu Dhabi Real Estate Market 2025</h2>
+            <p className="text-normal text-lg font-semibold text-[#E35F27]">Government-Backed Verification For Real Estate Listings</p>
+            <h3 className="text-2xl md:text-5xl font-semibold text-[#272963] my-5">Madhmoun (مضمون)</h3>
             <div className="flex flex-wrap gap-5">
                 <div className="w-[850]">
                     <div className="relative  justify-between items-center overflow-hidden rounded-xl">

@@ -13,18 +13,18 @@ export default function Main() {
             <div className="relative isolate overflow-hidden pt-14 pb-16 sm:pb-20">
                 <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/30 to-transparent" />
                 <img
-                    alt=""
+                    alt="psi-list" title="psi-list"
                     src="/main-banner.png"
                     className="absolute inset-0 -z-10 size-full object-cover not-dark:hidden"
                 />
                 <img
-                    alt=""
+                    alt="psi-list" title="psi-list"
                     src="/main-banner.png"
                     className="absolute inset-0 -z-10 size-full object-cover opacity-10 dark:hidden"
                 />
                 <div className="">
                     <div className="mx-auto container px-10">
-                        <div className=" max-w-3xl pt-32 sm:pt-48 lg:pt-56 relative flex flex-col space-y-5 items-start w-full p-5">
+                        <div className=" max-w-3xl pt-32 sm:pt-48 lg:pt-56 relative flex flex-col space-y-5 items-start w-full md:p-5 py-5">
                             <div className="text-start">
                                 <h1 className="text-5xl font-semibold tracking-tight text-white text-gray-900 sm:text-7xl ">
                                 Maximize Your Property's  Potential
@@ -39,7 +39,7 @@ export default function Main() {
                             {banners.map((item,index) => (
                                 <div key={index} className="relative flex flex-col space-y-5 items-start w-full p-5 border border-gray-600 backdrop-blur-xs bg-black/40 cursor-pointer rounded-xl shadow-md">
                                     <div className="w-fit relative border border-gray-600 rounded-full p-3">
-                                        <Image src={item.image} alt="" width="300" height="300" className="w-full object-fit rounded-xl" />
+                                        <Image src={item.image} alt="psi property" title="psi property" width="300" height="300" className="w-full object-fit rounded-xl" />
                                     </div>
                                     <div className="space-y-2.5">
                                         <h3 className="font-semibold capitalize text-xl">{item.name}</h3>

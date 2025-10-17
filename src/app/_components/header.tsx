@@ -167,7 +167,7 @@ export default function Header() {
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">PSI</span>
               <Image
-                alt="PSI"
+                alt="PSI" title='PSI'
                 src="/PSI-Logo2.svg"
                 className="h-auto w-full"
                 width={200}
@@ -205,12 +205,12 @@ export default function Header() {
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
                 <img
-                  alt=""
+                  alt="close" title='close'
                   src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
                   className="h-8 w-auto dark:hidden"
                 />
                 <img
-                  alt=""
+                  alt="logo" title='logo'
                   src="/PSI-Logo2.svg"
                   className="h-8 w-auto not-dark:hidden"
                 />

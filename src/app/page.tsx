@@ -6,13 +6,14 @@ import AbuDhabiPropertySale from "./_components/AbuDhabiPropertySale";
 import PerformanceSection from "./_components/PerformanceSection";
 import Why from "./_components/Why";
 import Testimonial from "./_components/Testimonial";
-
+import ListYourPropertySection from "./_components/ListYourPropertySection";
 
 export default function Home() {
 return (
     <>
         <Header/>
         <Main/>
+        <ListYourPropertySection />
         <RealEstateMarket/>
         <AbuDhabiPropertySale/>
 

@@ -4,7 +4,7 @@ const Why = () => {
 
     return(
         <>
-
+<section id="why-psi"  className="scroll-mt-28">
         <div className="w-full py-10">
             <div className="container md:flex px-10 mx-auto items-center mb-7">
                 <div className="md:w-[75%]">
@@ -38,6 +38,7 @@ const Why = () => {
                 </div>                           
             </div>
         </div>
+        </section>
         </>
     )
 

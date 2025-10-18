@@ -1,14 +1,39 @@
 'use client';
 
 import Image from 'next/image';
+import { useState } from 'react';
 import PropertyForm from '@/app/_components/PropertyForm';
 
 export default function FooterListSection() {
      const FOOTER_FORM_ID = 'footer-list-property-form';
+ const [isSending, setIsSending] = useState(false);
+
+  const Spinner = () => (
+    <svg
+      className="animate-spin h-5 w-5 text-white"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <circle
+        className="opacity-25"
+        cx="12"
+        cy="12"
+        r="10"
+        stroke="currentColor"
+        strokeWidth="4"
+        fill="none"
+      />
+      <path
+        className="opacity-75"
+        d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+        fill="currentColor"
+      />
+    </svg>
+  );
 
   return (
     <>
-    <section className="relative w-full min-h-screen text-white overflow-hidden flex items-center">
+    <section id="register" className="relative w-full min-h-screen text-white overflow-hidden flex items-center">
       <video
         className="absolute inset-0 w-full h-full object-cover -z-10"
         src="/footer-bg.mp4"
@@ -37,15 +62,29 @@ export default function FooterListSection() {
               <h3 className="text-[32px] md:text-[40px] font-bold leading-none tracking-[-0.02em] whitespace-nowrap">
                 List Your Property
               </h3>
-              <button
-                  type="submit"
-                  form={FOOTER_FORM_ID}
-                  className="shrink-0 rounded-full bg-[#E35F27] px-6 py-2.5 text-white font-semibold md:mt-0 mt-5"
-                >
-                Send
-              </button>
+   <button
+            type="submit"
+            form={FOOTER_FORM_ID}
+            disabled={isSending}
+            className={`shrink-0 rounded-full bg-[#E35F27] px-6 py-2.5 text-white font-semibold md:mt-0 mt-5 ${
+              isSending ? 'opacity-60 cursor-not-allowed' : ''
+            }`}
+          >
+            {isSending ? (
+              <span className="flex items-center gap-2">
+                <Spinner /> Sending…
+              </span>
+            ) : (
+              'Send'
+            )}
+          </button>
+
             </div>
-           <PropertyForm formId={FOOTER_FORM_ID} variant="footer" />
+            <PropertyForm
+          formId={FOOTER_FORM_ID}
+          variant="footer"
+          onLoadingChange={setIsSending}
+        />
           </div>
         </div>
       </div>

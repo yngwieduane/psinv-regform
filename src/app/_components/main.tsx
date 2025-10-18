@@ -24,7 +24,7 @@ export default function Main() {
                 />
                 <div className="lg:pt-30">
                     <div className="mx-auto container px-10">
-                        <div className=" max-w-3xl pt-32 sm:pt-48 lg:pt-56 relative flex flex-col space-y-5 items-start w-full xl:p-5 lg:py-5 lg:px-1 py-5">
+                    <div className=" max-w-3xl pt-32 sm:pt-48 relative flex flex-col space-y-5 items-start w-full xl:p-0 lg:py-5 lg:px-1 py-5">
                             <div className="text-start">
                                 <h1 className="text-5xl font-semibold tracking-tight text-white text-gray-900 sm:text-7xl ">
                                 Maximize Your Property's  Potential

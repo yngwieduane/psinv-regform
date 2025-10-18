@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Poppins,Noto_Sans_Arabic } from "next/font/google";
 import "./globals.css";
 import { GoogleTagManager } from "@next/third-parties/google";
 
@@ -23,9 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
        <GoogleTagManager gtmId="GTM-KDDP2SR" />
-      <body
-        className={poppins.className}
-      >
+       <body className={`${poppins.className} scroll-smooth`}>
         {children}
       </body>
     </html>

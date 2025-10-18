@@ -14,12 +14,12 @@ import { CheckIcon } from '@heroicons/react/20/solid'
 import Image from 'next/image'
 
 const navigation = [
-  { name: 'Home', href: '#' },
-  { name: 'List your property', href: '#' },
-  { name: 'Madhmoun', href: '#' },
-  { name: 'Sales', href: '#' },
-  { name: 'Why PSI?', href: '#' },
-  { name: 'Testimonials', href: '#' },
+  { name: 'Home', href: '#home' },
+  { name: 'List your property', href: '#list-your-property' },
+  { name: 'Madhmoun', href: '#madhmoun' },
+  { name: 'Sales', href: '#sales' },
+  { name: 'Why PSI?', href: '#why-psi' },
+  { name: 'Testimonials', href: '#testimonials' },
 ]
 const features = [
   {
@@ -164,7 +164,7 @@ export default function Header() {
       <header className="absolute inset-x-0 top-0 z-50 bg-black/25">
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8 container mx-auto">
           <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="#home" className="-m-1.5 p-1.5">
               <span className="sr-only">PSI</span>
               <Image
                 alt="PSI" title='PSI'
@@ -187,13 +187,13 @@ export default function Header() {
           </div>
           <div className="hidden lg:flex xl:gap-x-12 lg:gap-x-9">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm/6 font-semibold text-gray-400 hover:text-white">
+              <a key={item.name} href={item.href} onClick={() => setMobileMenuOpen(false)}  className="text-sm/6 font-semibold text-gray-400 hover:text-white">
                 {item.name}
               </a>
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm/6 font-semibold text-white bg-[#E46027] py-2 px-5 rounded-full">
+            <a href="#register" onClick={() => setMobileMenuOpen(false)} className="text-sm/6 font-semibold text-white bg-[#E46027] py-2 px-5 rounded-full">
               Register Now
             </a>
           </div>

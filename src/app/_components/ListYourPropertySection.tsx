@@ -17,15 +17,15 @@ export default function ListYourPropertySection() {
         <div className="md:w-2/3 text-[#fff] bg-[#17173B] p-5 rounded-lg space-y-5 ">
           <div className="relative rounded-xl text-white py-4 px-2 md:p-8 shadow-lg
                   flex flex-col">
-            <div className="md:flex items-center justify-between gap-4 mb-6">
-              <h3 className="text-[32px] md:text-[48px] lg:text-[60px] font-bold leading-none tracking-[-0.03em] whitespace-nowrap">
+            <div className="lg:flex items-center justify-between gap-4 mb-6">
+              <h3 className="text-[32px] md:text-[45px] xl:text-[60px] font-bold leading-none tracking-[-0.03em] whitespace-nowrap">
                 List Your Property
               </h3>
-      <button
-      type="submit"
-      form={HERO_FORM_ID}
-      className="rounded-full bg-[#E35F27] px-6 py-2.5 text-[16px] font-semibold text-white"
-    >
+                <button
+                  type="submit"
+                  form={HERO_FORM_ID}
+                  className="rounded-full bg-[#E35F27] px-6 py-2.5 text-[16px] font-semibold text-white lg:mt-0 mt-5"
+                >
                 Send
               </button>
             </div>

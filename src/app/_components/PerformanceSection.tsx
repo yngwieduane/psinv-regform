@@ -23,7 +23,7 @@ const PerformanceSection = () => {
                     <div className="md:w-[37%]">
                         <h2 className="md:text-7xl text-4xl font-medium leading-none mb-7"><strong>Performance</strong><br/>
                             <span className="font-light">Snapshot</span></h2>                                                   
-                        <p className="md:mb-0 mb-5">Our recent results highlight strong market performance and operational efficiency</p>  
+                        <p className="md:mb-0 mb-5 opacity-[0.8]">Our recent results highlight strong market performance and operational efficiency</p>  
                     </div>
                     <div className="md:w-[27%] ">
                         <div className="blurBox mb-10 relative py-10 px-5 bg-[#ffffff1a] rounded-[8px] border border-1 border-[#ffffff1a] backdrop-blur-[8px] space-y-5">

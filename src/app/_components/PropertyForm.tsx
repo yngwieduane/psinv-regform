@@ -8,7 +8,7 @@ import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import { usePathname } from 'next/navigation';
 import { sendGTMEvent } from '@next/third-parties/google';
-import { User, Mail, MapPin, UploadCloud } from 'lucide-react';
+import { User, Mail, MapPin } from 'lucide-react';
 
 const schema = z.object({
   firstName: z.string().min(1, { message: 'First name is required' }),
@@ -276,7 +276,7 @@ const baseInput =
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             body: emailBody,
-            receiver: 'wd3@psinv.net',
+            receiver: 'callcenter@psinv.net',
             subject: `Sell Property Inquiry - ${data.firstName} ${data.lastName}`,
             filename: attachmentPaths,
             filedata: '',

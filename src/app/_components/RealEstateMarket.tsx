@@ -1,5 +1,4 @@
 
-import Image from "next/image"
 import { FaPlay } from "react-icons/fa"
 import { Noto_Sans_Arabic } from "next/font/google";
 

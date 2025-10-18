@@ -1,7 +1,4 @@
 
-import Image from "next/image"
-import { FaPlay } from "react-icons/fa"
-
 const facts = [
   { name: 'Al Reem Island', sold: '787', price: '2,702,982' },
   { name: 'Raha Island', sold: '368', price: '4,342,243' },

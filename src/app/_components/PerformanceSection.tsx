@@ -1,6 +1,5 @@
 "use client"
 
-import { url } from "inspector"
 import { ArrowIconGreen, ArrowIconRed } from "./arrowIcon"
 
 const PerformanceSection = () => {

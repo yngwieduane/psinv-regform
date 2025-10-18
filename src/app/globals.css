@@ -24,6 +24,9 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+.arabic{
+  font-family: var(--font-noto-sans-arabic);
+}
 /* === Phone field container to match your dark inputs === */
 .PhoneField{
   display:flex;

@@ -12,14 +12,14 @@ export default function RealEstateMarket() {
 
     return(
         <section id="madhmoun">
-        <div className="mx-auto container px-10 my-5 pb-5">
+        <div className="mx-auto container px-6 md:px-10 my-5 pb-5">
             <h2 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-[#272963] my-10">Abu Dhabi Real Estate Market 2025</h2>
             <p className="text-normal text-lg font-semibold text-[#E35F27]">Government-Backed Verification For Real Estate Listings</p>
             <h3 className="text-2xl md:text-5xl font-semibold text-[#272963] my-5">Madhmoun <span className={notosans.className}>(مضمون)</span></h3>
             <div className="md:flex gap-6 items-stretch w-full justify-between">
                 <div className="md:w-2/3 w-full flex flex-col">
-                    <div className="relative  justify-between items-center overflow-hidden rounded-xl">
-                        <video className="size-fit object-cover object-center rounded-xl" src="/realestatemarket.mp4" autoPlay loop playsInline muted></video>
+                    <div className="relative justify-between items-center overflow-hidden rounded-xl">
+                        <video className="w-full h-auto aspect-video object-cover object-center rounded-xl" src="/realestatemarket.mp4" autoPlay loop playsInline muted></video>
                         <div className="absolute z-10 bottom-10 left-10 bg-white p-4 rounded-full">
                             <FaPlay className="size-6 text-[#272963] p-1"/>
                         </div>

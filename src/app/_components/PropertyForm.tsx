@@ -407,18 +407,18 @@ const baseInput =
           <select
             {...register('propertyType')}
             defaultValue=""
-            className={style.select}
+            className={`${style.select} w-full appearance-none pr-8`}
           >
             <option value="" disabled>
               Select a property type
             </option>
-
             <option>Apartment</option>
             <option>Villa</option>
             <option>Townhouse</option>
             <option>Plot</option>
-            <option>Office</option>
+            <option>Office</option>            
           </select>
+
           <span
             className={[
               'pointer-events-none absolute',
@@ -435,7 +435,7 @@ const baseInput =
                 strokeLinejoin="round"
               />
             </svg>
-          </span>
+          </span>          
         </div>
         <div>
           <label className={`mb-1 block text-xs ${style.label}`}>

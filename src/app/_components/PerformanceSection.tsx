@@ -7,7 +7,7 @@ const PerformanceSection = () => {
     return(
         <>
 
-        <div className="w-full text-[#fff] relative min-h-screen flex justify-between items-center overflow-hidden">                         
+        <div className="w-full text-[#fff] relative min-h-screen md:flex justify-between items-center overflow-hidden">                         
            <video
           className="absolute inset-0 w-full h-full object-cover object-center -z-10"
           src="/video-bg.mp4"
@@ -17,8 +17,8 @@ const PerformanceSection = () => {
           playsInline
         ></video>
             <div className="absolute inset-0 bg-gradient-to-l from-black/90 via-black/30 to-transparent z-0"></div>  
-            <div className="absolute w-full z-10">       
-                <div className="container lg:flex justify-between mx-auto px-10 items-center mb-7 md:py-60 py-30">
+            <div className="relative z-10 container mx-auto ">       
+                <div className="container lg:flex justify-between mx-auto px-6 md:px-10 items-center mb-7 md:py-60 sm:py-30 py-10">
                     <div className="md:w-[37%]">
                         <h2 className="md:text-7xl text-4xl font-medium leading-none mb-7"><strong>Performance</strong><br/>
                             <span className="font-light">Snapshot</span></h2>                                                   

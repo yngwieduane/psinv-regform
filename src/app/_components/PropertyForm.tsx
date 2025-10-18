@@ -229,7 +229,7 @@ const baseInput =
       Bedroom: '21935',
       Bathroom: '21935',
       Budget: data.price || '100000',
-      Budget2: '1000000',
+      Budget2: data.price || '100000',
       AreaFrom: '',
       AreaTo: '',
       RequirementCountryID: '65946',

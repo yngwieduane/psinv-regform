@@ -67,7 +67,7 @@ export default function FooterListSection() {
             form={FOOTER_FORM_ID}
             disabled={isSending}
             className={`shrink-0 rounded-full bg-[#E35F27] px-6 py-2.5 text-white font-semibold md:mt-0 mt-5 ${
-              isSending ? 'opacity-60 cursor-not-allowed' : ''
+              isSending ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer'
             }`}
           >
             {isSending ? (

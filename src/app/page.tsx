@@ -14,7 +14,7 @@ return (
     <>
         <Header/>
         <Main/>
-       <ListYourPropertySection />
+        <ListYourPropertySection />
         <RealEstateMarket/>
     
         <AbuDhabiPropertySale/>

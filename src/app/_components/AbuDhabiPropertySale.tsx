@@ -24,8 +24,8 @@ export default function AbuDhabiPropertySale() {
             <video className="absolute inset-0 w-full h-full object-cover object-center -z-10" src="/psi-ferarri.mp4" autoPlay loop playsInline muted></video>
             <div className="absolute w-full z-10">
                 <div className="container mx-auto md:py-50 py-10">
-                    <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center">
-                        <div className="gap-2 flex flex-wrap mx-10 md:mx-15">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-center">
+                        <div className="gap-2 flex flex-wrap mx-10 lg:mx-15">
                             <h2 className="text-2xl md:text-7xl text-white font-semibold ">Abu Dhabi Property Sales - </h2>
                             <h2 className="text-2xl md:text-7xl text-white font-light">September 2025 Overview</h2>
                             <div className="flex flex-wrap justify-start md:gap-3 divide-x divide-[#ffffff50] mt-1 md:mt-10 w-full">
@@ -36,7 +36,7 @@ export default function AbuDhabiPropertySale() {
                         <div>
                             <div className="flow-root mx-15">
                                 <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                                    <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+                                    <div className="inline-block min-w-full py-2 align-middle sm:px-3 lg:px-8">
                                         <div className="overflow-hidden shadow-sm outline-1 outline-black/5 sm:rounded-lg ">
                                         <table className="relative min-w-full divide-y divide-gray-300 backdrop-blur-xs">
                                             <thead className="bg-white/60 backdrop-blur-xs">

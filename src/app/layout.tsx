@@ -23,9 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
        <GoogleTagManager gtmId="GTM-KDDP2SR" />
-      <body
-        className={poppins.className}
-      >
+       <body className={`${poppins.className} scroll-smooth`}>
         {children}
       </body>
     </html>

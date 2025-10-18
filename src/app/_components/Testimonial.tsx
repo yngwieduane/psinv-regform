@@ -11,7 +11,7 @@ const Testimonial = () => {
 
     return(
         <>
-
+<section id="testimonials">
         <div className="w-full py-10">
             <div className="container px-10 mx-auto items-center mb-7">
                 <div className="w-full mb-7">
@@ -28,7 +28,8 @@ const Testimonial = () => {
                     </div>  
                 </div>            
             </div>
-        </div>            
+        </div>   
+        </section>         
         </>
     )
 

@@ -5,6 +5,7 @@ import { FaPlay } from "react-icons/fa"
 export default function RealEstateMarket() {
 
     return(
+        <section id="madhmoun">
         <div className="mx-auto container px-10 my-5 pb-5">
             <h2 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-[#272963] my-10">Abu Dhabi Real Estate Market 2025</h2>
             <p className="text-normal text-lg font-semibold text-[#E35F27]">Government-Backed Verification For Real Estate Listings</p>
@@ -28,6 +29,7 @@ export default function RealEstateMarket() {
                 </div>
             </div>
         </div>
+        </section>
     )
 
 }

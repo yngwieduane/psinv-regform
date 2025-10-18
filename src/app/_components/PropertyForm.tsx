@@ -31,16 +31,26 @@ type PropertyFormProps = {
   formId?: string;
   variant?: 'dark' | 'light' | 'footer';
   className?: string;
+  onLoadingChange?: (loading: boolean) => void;
 };
 export default function PropertyForm({
   formId = 'list-property-form',
   variant = 'dark',
   className = '',
+  onLoadingChange,
 }: PropertyFormProps) {
   const isFooter = variant === 'footer';
   const isDark = variant === 'dark' || isFooter;
   const pathname = usePathname();
   const locale = (pathname?.split('/')?.[1] || 'en') as string;
+  const [isLoading, setIsLoading] = useState(false);
+  const [postId, setPostId] = useState<null | 'Success' | 'Error'>(null);
+  const [files, setFiles] = useState<File[]>([]);
+
+  const setLoading = (v: boolean) => {
+    setIsLoading(v);
+    onLoadingChange?.(v);
+  };
 
   const filesInputId = `${formId}-files`;
   const {
@@ -62,13 +72,12 @@ export default function PropertyForm({
     },
   });
 
-  const [postId, setPostId] = useState<null | 'Success' | 'Error'>(null);
-  const [files, setFiles] = useState<File[]>([]);
 
   const handleFilesChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) setFiles(Array.from(e.target.files));
   };
-const baseInput = 'w-full rounded-md px-3 py-2 outline-none transition ring-1 text-sm';
+const baseInput =
+    'w-full rounded-md px-3 py-2 outline-none transition ring-1 text-sm';
 
   const style = isDark
     ? {
@@ -88,6 +97,8 @@ const baseInput = 'w-full rounded-md px-3 py-2 outline-none transition ring-1 te
           'w-full h-12 rounded-md bg-white text-[#1f2937] ring-1 ring-gray-300 focus:ring-gray-400 outline-none pr-9 pl-4 appearance-none',
       };
   const onSubmit = async (data: FormData) => {
+    if (isLoading) return;
+    setLoading(true);
     sendGTMEvent({ event: 'SellPropertyInquiry', value: '1' });
     setPostId(null);
 
@@ -132,7 +143,9 @@ const baseInput = 'w-full rounded-md px-3 py-2 outline-none transition ring-1 te
         const res = await fetch('/api/upload', { method: 'POST', body: fd });
         if (res.ok) {
           const json = await res.json();
-          uploaded = Array.isArray(json?.files) ? (json.files as UploadedFile[]) : [];
+                    uploaded = Array.isArray(json?.files)
+            ? (json.files as UploadedFile[])
+            : [];
           uploadedFileNames = uploaded.length
             ? uploaded.map((f) => f.name)
             : files.map((f) => f.name);
@@ -142,7 +155,9 @@ const baseInput = 'w-full rounded-md px-3 py-2 outline-none transition ring-1 te
       }
     } catch {
       uploadedFileNames = files.map((f) => f.name);
+
     }
+
 
     const attachmentPaths = uploaded.map((f) => f.path).join(',');
     const uploadedLinksHtml = uploaded.length
@@ -266,7 +281,7 @@ const baseInput = 'w-full rounded-md px-3 py-2 outline-none transition ring-1 te
             filename: attachmentPaths,
             filedata: '',
           }),
-        }).catch((err) => console.warn('Email send failed (ignored):', err));
+        }).catch(() => {});
 
         return;
       }
@@ -277,6 +292,8 @@ const baseInput = 'w-full rounded-md px-3 py-2 outline-none transition ring-1 te
     } catch (err) {
       console.error('Error:', err);
       setPostId('Error');
+    } finally {
+       setLoading(false);
     }
   };
 
@@ -286,6 +303,7 @@ const baseInput = 'w-full rounded-md px-3 py-2 outline-none transition ring-1 te
       onSubmit={handleSubmit(onSubmit)}
       className={`mt-6 space-y-5 no-scrollbar ${className}`}
     >
+
       {postId === 'Success' && (
         <div className="p-3 rounded bg-green-500 text-white text-center font-medium">
           Thank you! Your property details have been submitted successfully.
@@ -391,7 +409,10 @@ const baseInput = 'w-full rounded-md px-3 py-2 outline-none transition ring-1 te
             defaultValue=""
             className={style.select}
           >
-            <option value="" disabled>Select a property type</option>
+            <option value="" disabled>
+              Select a property type
+            </option>
+
             <option>Apartment</option>
             <option>Villa</option>
             <option>Townhouse</option>
@@ -455,20 +476,20 @@ const baseInput = 'w-full rounded-md px-3 py-2 outline-none transition ring-1 te
   >
     <div className="flex justify-center mb-3">
       {variant === 'dark' ? (
-        <div className="p-3 rounded-lg bg-white/10">
+        <div className="rounded-lg bg-[#6466B5] p-3">
           <img
-            src="/featured-icon-footer.svg"
+            src="icons/featured-icon.svg"
             alt=""
-            className="h-6 w-6"
+            className="h-10 w-10"
             aria-hidden="true"
           />
         </div>
       ) : (
-        <div className="p-3 bg-[#FFF4EF] rounded-lg">
+        <div className="p-2 bg-[#ffff] rounded-lg">
           <img
             src="/featured-icon-footer.svg"
             alt=""
-            className="h-6 w-6"
+            className="h-10 w-10"
             aria-hidden="true"
           />
         </div>

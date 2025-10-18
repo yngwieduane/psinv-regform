@@ -18,6 +18,7 @@ const facts = [
 export default function AbuDhabiPropertySale() {
 
     return(
+        <section id="sales">
         <div className="relative min-h-screen flex justify-between items-center overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/30 to-transparent z-0" />
             <video className="absolute inset-0 w-full h-full object-cover object-center -z-10" src="/psi-ferarri.mp4" autoPlay loop playsInline muted></video>
@@ -85,6 +86,7 @@ export default function AbuDhabiPropertySale() {
                 </div>
             </div>
         </div>
+        </section>
     )
 
 }

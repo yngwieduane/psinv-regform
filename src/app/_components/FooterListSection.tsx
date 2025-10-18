@@ -62,7 +62,7 @@ export default function FooterListSection() {
               <h3 className="text-[32px] md:text-[40px] font-bold leading-none tracking-[-0.02em] whitespace-nowrap">
                 List Your Property
               </h3>
-   <button
+          <button
             type="submit"
             form={FOOTER_FORM_ID}
             disabled={isSending}
@@ -78,21 +78,20 @@ export default function FooterListSection() {
               'Send'
             )}
           </button>
-
-            </div>
-            <PropertyForm
+        </div>
+        <PropertyForm
           formId={FOOTER_FORM_ID}
           variant="footer"
           onLoadingChange={setIsSending}
         />
-          </div>
-        </div>
       </div>
+    </div>
+    </div>
       
-    </section>
-      <div className="w-full bg-[#272963] text-[#fff] text-center py-5">
-        <p className='md:text-[14px] text-[11px]'>© 2025 Property Shop Investment LLC. | All Rights Reserved.</p>
-      </div>
-      </>
+  </section>
+    <div className="w-full bg-[#272963] text-[#fff] text-center py-5">
+      <p className='md:text-[14px] text-[11px]'>© 2025 Property Shop Investment LLC. | All Rights Reserved.</p>
+    </div>
+    </>
   );
 }

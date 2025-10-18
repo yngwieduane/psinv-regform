@@ -22,7 +22,7 @@ export default function Main() {
                     src="/main-banner.png"
                     className="absolute inset-0 -z-10 size-full object-cover opacity-10 dark:hidden"
                 />
-                <div className="">
+                <div className="lg:pt-30">
                     <div className="mx-auto container px-10">
                     <div className=" max-w-3xl pt-32 sm:pt-48 relative flex flex-col space-y-5 items-start w-full xl:p-0 lg:py-5 lg:px-1 py-5">
                             <div className="text-start">

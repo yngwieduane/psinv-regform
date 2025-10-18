@@ -44,7 +44,7 @@ export default function FooterListSection() {
       />
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent -z-10" />
       <div className="relative z-10 container mx-auto px-6 md:px-10 py-16 md:py-28">
-        <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_640px] gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_640px] gap-8 items-center">
           <div className="max-w-xl text-center md:text-left mx-auto md:mx-0">
             <h2 className="text-4xl md:text-6xl font-semibold leading-tight">
               <span className="font-bold">List Your Property</span>

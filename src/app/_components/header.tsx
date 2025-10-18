@@ -185,7 +185,7 @@ export default function Header() {
               <Bars3Icon aria-hidden="true" className="size-6" />
             </button>
           </div>
-          <div className="hidden lg:flex lg:gap-x-12">
+          <div className="hidden lg:flex xl:gap-x-12 lg:gap-x-9">
             {navigation.map((item) => (
               <a key={item.name} href={item.href} className="text-sm/6 font-semibold text-gray-400 hover:text-white">
                 {item.name}

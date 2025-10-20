@@ -8,7 +8,7 @@ import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import { usePathname } from 'next/navigation';
 import { sendGTMEvent } from '@next/third-parties/google';
-import { User, Mail, MapPin, UploadCloud } from 'lucide-react';
+import { User, Mail, MapPin } from 'lucide-react';
 
 const schema = z.object({
   firstName: z.string().min(1, { message: 'First name is required' }),
@@ -229,7 +229,7 @@ const baseInput =
       Bedroom: '21935',
       Bathroom: '21935',
       Budget: data.price || '100000',
-      Budget2: '1000000',
+      Budget2: data.price || '100000',
       AreaFrom: '',
       AreaTo: '',
       RequirementCountryID: '65946',
@@ -276,7 +276,7 @@ const baseInput =
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             body: emailBody,
-            receiver: 'wd3@psinv.net',
+            receiver: 'callcenter@psinv.net',
             subject: `Sell Property Inquiry - ${data.firstName} ${data.lastName}`,
             filename: attachmentPaths,
             filedata: '',
@@ -407,18 +407,18 @@ const baseInput =
           <select
             {...register('propertyType')}
             defaultValue=""
-            className={style.select}
+            className={`${style.select} w-full appearance-none pr-8`}
           >
             <option value="" disabled>
               Select a property type
             </option>
-
             <option>Apartment</option>
             <option>Villa</option>
             <option>Townhouse</option>
             <option>Plot</option>
-            <option>Office</option>
+            <option>Office</option>            
           </select>
+
           <span
             className={[
               'pointer-events-none absolute',
@@ -435,7 +435,7 @@ const baseInput =
                 strokeLinejoin="round"
               />
             </svg>
-          </span>
+          </span>          
         </div>
         <div>
           <label className={`mb-1 block text-xs ${style.label}`}>

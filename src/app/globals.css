@@ -72,3 +72,17 @@ body {
 .PhoneField input[type="number"]::-webkit-outer-spin-button,
 .PhoneField input[type="number"]::-webkit-inner-spin-button{ -webkit-appearance:none; margin:0; }
 .PhoneField input[type="number"]{ -moz-appearance:textfield; }
+
+select option {
+  color: #111 !important;
+  background-color: #fff !important;
+}
+
+select:focus option {
+  color: #111 !important;
+  background-color: #fff !important;
+}
+
+select {
+  color-scheme: light;
+}

@@ -13,7 +13,7 @@ const Testimonial = () => {
         <>
 <section id="testimonials">
         <div className="w-full py-10">
-            <div className="container px-10 mx-auto items-center mb-7">
+            <div className="container px-6 md:px-10 mx-auto items-center mb-7">
                 <div className="w-full mb-7">
                     <h5 className="text-lg text-[#E35F27] font-semibold mb-3">Testimonials</h5>
                     <h2 className="md:text-[40px] text-[30px] text-[#272963] font-semibold leading-normal mb-3">Client Success Stories</h2>                    

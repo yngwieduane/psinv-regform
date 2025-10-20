@@ -27,13 +27,13 @@ export default function AbuDhabiPropertySale() {
                             <h2 className="text-2xl md:text-7xl text-white font-light">September 2025 Overview</h2>
                             <div className="flex flex-wrap justify-start md:gap-3 divide-x divide-[#ffffff50] mt-1 md:mt-10 w-full">
                                 <div className="pl-0 pr-7 py-4 text-lg text-start font-light">Total Market: <span className="font-bold">2,216 units sold</span></div>
-                                <div className="md:p-4 pl-0 pb-4 text-lg font-light">Average Price: <span className="font-bold">AED 2.89M</span></div>
+                                <div className="2xl:p-4 pl-0 pb-4 text-lg font-light">Average Price: <span className="font-bold">AED 2.89M</span></div>
                             </div>
                         </div>
                         <div>
-                            <div className="flow-root mx-10 md:mx-15">
+                            <div className="flow-root mx-10 md:mx-13 lg:mx-15">
                                 <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                                    <div className="inline-block min-w-full py-2 align-middle sm:px-3 lg:px-8">
+                                    <div className="inline-block min-w-full py-2 align-middle sm:px-3 md:px-0 lg:px-8">
                                         <div className="overflow-hidden shadow-sm outline-1 outline-black/5 sm:rounded-lg ">
                                         <table className="relative min-w-full divide-y divide-gray-300 backdrop-blur-xs">
                                             <thead className="bg-white/60 backdrop-blur-xs">

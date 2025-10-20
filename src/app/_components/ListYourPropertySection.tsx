@@ -39,10 +39,23 @@ export default function ListYourPropertySection() {
         exposure to closing the deal.
       </h2>
       <div className="md:flex mx-auto gap-8 items-center items-stretch">
-        <div
+        {/* <div
           className="md:w-1/3 bg-cover bg-center bg-no-repeat min-h-full rounded-[8px]"
           style={{ backgroundImage: 'url(/list-property.webp)' }}
-        ></div>
+        ></div> */}
+        <div
+          className="md:w-1/3 bg-cover bg-center bg-no-repeat min-h-full rounded-[8px]"          
+        >
+          <video
+            className="w-full md:h-full h-[450px] object-cover md:object-center object-bottom rounded-[8px] md:mb-0 mb-5"
+            src="/list-video.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+          ></video>
+        </div>
+
         <div className="md:w-2/3 text-[#fff] bg-[#17173B] p-5 rounded-lg space-y-5">
           <div className="relative rounded-xl text-white py-4 px-2 md:p-8 shadow-lg flex flex-col">
             <div className="lg:flex items-center justify-between gap-4 mb-6">

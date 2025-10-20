@@ -33,6 +33,14 @@ type PropertyFormProps = {
   className?: string;
   onLoadingChange?: (loading: boolean) => void;
 };
+const UNIT_TYPE_MAP: Record<string, number> = {
+  Apartment: 19,
+  Villa: 20,
+  Townhouse: 131090,
+  Plot: 47390,
+  Office: 24,
+};
+
 export default function PropertyForm({
   formId = 'list-property-form',
   variant = 'dark',
@@ -42,10 +50,16 @@ export default function PropertyForm({
   const isFooter = variant === 'footer';
   const isDark = variant === 'dark' || isFooter;
   const pathname = usePathname();
+  const ALLOWED_MIME = ['image/png', 'image/jpeg', 'image/gif', 'image/svg+xml'];
+  const MAX_BYTES = 2 * 1024 * 1024; // 2 MB
+  const MAX_W = 800;
+  const MAX_H = 400;
   const locale = (pathname?.split('/')?.[1] || 'en') as string;
   const [isLoading, setIsLoading] = useState(false);
   const [postId, setPostId] = useState<null | 'Success' | 'Error'>(null);
   const [files, setFiles] = useState<File[]>([]);
+const [fileErrors, setFileErrors] = useState<string[]>([]);
+
 
   const setLoading = (v: boolean) => {
     setIsLoading(v);
@@ -72,9 +86,54 @@ export default function PropertyForm({
     },
   });
 
+function checkImageDimensions(file: File): Promise<void> {
+    return new Promise((resolve, reject) => {
+      const url = URL.createObjectURL(file);
+      const img = new Image();
+      img.onload = () => {
+        const ok = img.width <= MAX_W && img.height <= MAX_H;
+        URL.revokeObjectURL(url);
+        ok
+          ? resolve()
+          : reject(`“${file.name}” is ${img.width}×${img.height}. Max ${MAX_W}×${MAX_H}px.`);
+      };
+      img.onerror = () => {
+        URL.revokeObjectURL(url);
+        reject(`Could not read “${file.name}”.`);
+      };
+      img.src = url;
+    });
+  }
 
-  const handleFilesChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) setFiles(Array.from(e.target.files));
+  async function validateOne(file: File): Promise<string | null> {
+    if (!ALLOWED_MIME.includes(file.type))
+      return `“${file.name}” must be SVG, PNG, JPG or GIF.`;
+
+    if (file.size > MAX_BYTES)
+      return `“${file.name}” is too large (${Math.ceil(file.size / 1024)} KB). Max 2048 KB.`;
+
+    if (file.type !== 'image/svg+xml') {
+      try {
+        await checkImageDimensions(file);
+      } catch (e) {
+        return String(e);
+      }
+    }
+    return null;
+  }
+ const handleFilesChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const picked = Array.from(e.target.files ?? []);
+    const errs: string[] = [];
+    const accepted: File[] = [];
+
+    for (const f of picked) {
+      const err = await validateOne(f);
+      if (err) errs.push(err);
+      else accepted.push(f);
+    }
+
+    setFileErrors(errs);
+    setFiles(accepted);
   };
 const baseInput =
     'w-full rounded-md px-3 py-2 outline-none transition ring-1 text-sm';
@@ -98,6 +157,10 @@ const baseInput =
       };
   const onSubmit = async (data: FormData) => {
     if (isLoading) return;
+    if (fileErrors.length) {
+    document.getElementById(filesInputId)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
+  }
     setLoading(true);
     sendGTMEvent({ event: 'SellPropertyInquiry', value: '1' });
     setPostId(null);
@@ -105,6 +168,8 @@ const baseInput =
     const urlParams = new URLSearchParams(window.location.search);
     const source = urlParams.get('utm_source') || '';
     const currentUrl = window.location.href;
+    const selectedType = (data.propertyType || '').trim();
+    const unitType = UNIT_TYPE_MAP[selectedType] ?? 19;
 
     let mediaType = '129475';
     let mediaName = '165233';
@@ -221,7 +286,7 @@ const baseInput =
       DistrictID: '102625',
       CommunityID: '',
       PropertyID: '',
-      UnitType: '19',
+      UnitType: String(unitType),
       MethodOfContact: methodOfContact,
       MediaType: mediaType,
       MediaName: mediaName,
@@ -254,12 +319,15 @@ const baseInput =
       contactClassId: '',
     };
 
-    try {
-      const response = await fetch(
-        'https://api.portal.psi-crm.com/leads?APIKEY=160c2879807f44981a4f85fe5751272f4bf57785fb6f39f80330ab3d1604e050787d7abff8c5101a',
-        { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formDataToSend) }
-      );
-
+  try {
+  const response = await fetch(
+    `https://api.portal.psi-crm.com/leads?APIKEY=${process.env.NEXT_PUBLIC_PSI_API_KEY}`,
+    {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formDataToSend),
+    }
+  );
       const result = await response.json().catch(() => ({}));
 
       if (response.ok) {
@@ -404,21 +472,18 @@ const baseInput =
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="relative">
           <label className={`mb-1 block text-xs ${style.label}`}>Property Type</label>
-          <select
-            {...register('propertyType')}
-            defaultValue=""
-            className={`${style.select} w-full appearance-none pr-8`}
-          >
-            <option value="" disabled>
-              Select a property type
-            </option>
-            <option>Apartment</option>
-            <option>Villa</option>
-            <option>Townhouse</option>
-            <option>Plot</option>
-            <option>Office</option>            
-          </select>
-
+<select
+  {...register('propertyType')}
+  defaultValue=""
+  className={`${style.select} w-full appearance-none pr-8`}
+>
+  <option value="" disabled>Select a property type</option>
+  <option value="Apartment">Apartment</option>
+  <option value="Villa">Villa</option>
+  <option value="Townhouse">Townhouse</option>
+  <option value="Plot">Plot</option>
+  <option value="Office">Office</option>
+</select>
           <span
             className={[
               'pointer-events-none absolute',
@@ -520,28 +585,24 @@ const baseInput =
     >
       SVG, PNG, JPG or GIF (max. 800×400px)
     </p>
-
-    {!!files.length && (
-      <ul
-        className={`mt-3 text-xs ${
-          variant === 'dark' ? 'text-white/70' : 'text-gray-700'
-        }`}
-      >
-        {files.map((f, i) => (
-          <li key={`${f.name}-${i}`}>{f.name}</li>
-        ))}
-      </ul>
-    )}
+{!!fileErrors.length && (
+  <ul className="mt-2 text-xs text-red-400 space-y-1">
+    {fileErrors.map((msg, i) => (
+      <li key={i}>• {msg}</li>
+    ))}
+  </ul>
+)}
   </label>
 
-  <input
-    id={filesInputId}
-    name="files"
-    type="file"
-    multiple
-    className="sr-only"
-    onChange={handleFilesChange}
-  />
+<input
+  id={filesInputId}
+  name="files"
+  type="file"
+  multiple
+  accept="image/png,image/jpeg,image/gif,image/svg+xml"
+  className="sr-only"
+  onChange={handleFilesChange}
+/>
 </div>
 
 

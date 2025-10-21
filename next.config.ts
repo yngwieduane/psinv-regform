@@ -1,8 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // output: 'export',
+  //output: 'export',
   // basePath: '/list-your-property',
+  // assetPrefix: '/list-your-property/',
   /* config options here */
 };
 

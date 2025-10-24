@@ -1,0 +1,24 @@
+[
+  { "date": "2019", "region": "Abu Dhabi City", "district": "saadiyat island", "type": "apartment", "beds": "1 bed", "saleprice": null, "annualrent": 80746 },
+  { "date": "2020", "region": "Abu Dhabi City", "district": "saadiyat island", "type": "apartment", "beds": "1 bed", "saleprice": 1203993.353, "annualrent": 70620 },
+  { "date": "2021", "region": "Abu Dhabi City", "district": "saadiyat island", "type": "apartment", "beds": "1 bed", "saleprice": 1228046.987, "annualrent": 66366 },
+  { "date": "2022", "region": "Abu Dhabi City", "district": "saadiyat island", "type": "apartment", "beds": "1 bed", "saleprice": 1228046.987, "annualrent": 62607 },
+  { "date": "2023", "region": "Abu Dhabi City", "district": "saadiyat island", "type": "apartment", "beds": "1 bed", "saleprice": 1107781.833, "annualrent": 70949 },
+  { "date": "2024", "region": "Abu Dhabi City", "district": "saadiyat island", "type": "apartment", "beds": "1 bed", "saleprice": 1117782.634, "annualrent": 75772 },
+  { "date": "2025", "region": "Abu Dhabi City", "district": "saadiyat island", "type": "apartment", "beds": "1 bed", "saleprice": 1159236.22, "annualrent": 82954 },
+  { "date": "2019", "region": "Abu Dhabi City", "district": "saadiyat island", "type": "villa", "beds": "4 beds", "saleprice": 6339890.78, "annualrent": 301827 },
+  { "date": "2020", "region": "Abu Dhabi City", "district": "saadiyat island", "type": "villa", "beds": "4 beds", "saleprice": 6216960.983, "annualrent": 310446 },
+  { "date": "2021", "region": "Abu Dhabi City", "district": "saadiyat island", "type": "villa", "beds": "4 beds", "saleprice": 6010942.65, "annualrent": 336733 },
+  { "date": "2022", "region": "Abu Dhabi City", "district": "saadiyat island", "type": "villa", "beds": "4 beds", "saleprice": 6235578.083, "annualrent": 355422 },
+  { "date": "2023", "region": "Abu Dhabi City", "district": "saadiyat island", "type": "villa", "beds": "4 beds", "saleprice": 6160854.167, "annualrent": 361900 },
+  { "date": "2024", "region": "Abu Dhabi City", "district": "saadiyat island", "type": "villa", "beds": "4 beds", "saleprice": 6312921.362, "annualrent": 416473 },
+  { "date": "2025", "region": "Abu Dhabi City", "district": "saadiyat island", "type": "villa", "beds": "4 beds", "saleprice": 6643026.862, "annualrent": 403501 },
+  {"date": "2019", "region": "Abu Dhabi City", "district": "Yas Island", "type": "villa", "beds": "5 beds", "saleprice": 4883257.669, "annualrent": 219399},
+  {"date": "2020", "region": "Abu Dhabi City", "district": "Yas Island", "type": "villa", "beds": "5 beds", "saleprice": 4912387.624, "annualrent": 220000},
+  {"date": "2021", "region": "Abu Dhabi City", "district": "Yas Island", "type": "villa", "beds": "5 beds", "saleprice": 4712825.46, "annualrent": 219789},
+  {"date": "2022", "region": "Abu Dhabi City", "district": "Yas Island", "type": "villa", "beds": "5 beds", "saleprice": 4488112.002, "annualrent": 221525},
+  {"date": "2023", "region": "Abu Dhabi City", "district": "Yas Island", "type": "villa", "beds": "5 beds", "saleprice": 4584062.583, "annualrent": 225511},
+  {"date": "2024", "region": "Abu Dhabi City", "district": "Yas Island", "type": "villa", "beds": "5 beds", "saleprice": 5139441.69, "annualrent": 229747},
+  {"date": "2025", "region": "Abu Dhabi City", "district": "Yas Island", "type": "villa", "beds": "5 beds", "saleprice": 4911644.562, "annualrent": 228415}
+
+]

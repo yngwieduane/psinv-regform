@@ -1,0 +1,37 @@
+[
+  { "date": "2018", "place": "Al raha beach", "apartmentSale": 96.696894 },
+  { "date": "2019", "place": "Al raha beach", "apartmentSale": 90.502288 },
+  { "date": "2020", "place": "Al raha beach", "apartmentSale": 85.360502 },
+  { "date": "2021", "place": "Al raha beach", "apartmentSale": 85.549254 },
+  { "date": "2022", "place": "Al raha beach", "apartmentSale": 87.086092 },
+  { "date": "2023", "place": "Al raha beach", "apartmentSale": 87.169779 },
+  { "date": "2024", "place": "Al raha beach", "apartmentSale": 96.507917 },
+  { "date": "2025", "place": "Al raha beach", "apartmentSale": 103.63646 },
+
+  { "date": "2018", "place": "reem island", "apartmentSale": 96.41212 },
+  { "date": "2019", "place": "reem island", "apartmentSale": 89.175804 },
+  { "date": "2020", "place": "reem island", "apartmentSale": 84.486887 },
+  { "date": "2021", "place": "reem island", "apartmentSale": 86.701545 },
+  { "date": "2022", "place": "reem island", "apartmentSale": 86.9343 },
+  { "date": "2023", "place": "reem island", "apartmentSale": 87.319762 },
+  { "date": "2024", "place": "reem island", "apartmentSale": 96.836616 },
+  { "date": "2025", "place": "reem island", "apartmentSale": 106.78169 },
+
+  { "date": "2018", "place": "saadiyat island", "apartmentSale": 99.503029, "villaSale": 100.29187 },
+  { "date": "2019", "place": "saadiyat island", "apartmentSale": 96.371523, "villaSale": 97.048939 },
+  { "date": "2020", "place": "saadiyat island", "apartmentSale": 91.944866, "villaSale": 95.389815 },
+  { "date": "2021", "place": "saadiyat island", "apartmentSale": 94.48305, "villaSale": 105.477885 },
+  { "date": "2022", "place": "saadiyat island", "apartmentSale": 103.338594, "villaSale": 117.879195 },
+  { "date": "2023", "place": "saadiyat island", "apartmentSale": 109.72626, "villaSale": 120.699584 },
+  { "date": "2024", "place": "saadiyat island", "apartmentSale": 120.677095, "villaSale": 130.334569 },
+  { "date": "2025", "place": "saadiyat island", "apartmentSale": 128.6634, "villaSale": 134.89862 },
+
+  { "date": "2018", "place": "yas island", "apartmentSale": 96.776206, "villaSale": 100.527031 },
+  { "date": "2019", "place": "yas island", "apartmentSale": 97.047187, "villaSale": 100.738469 },
+  { "date": "2020", "place": "yas island", "apartmentSale": 92.255442, "villaSale": 105.644838 },
+  { "date": "2021", "place": "yas island", "apartmentSale": 92.94423, "villaSale": 118.073561 },
+  { "date": "2022", "place": "yas island", "apartmentSale": 95.413297, "villaSale": 127.353257 },
+  { "date": "2023", "place": "yas island", "apartmentSale": 96.429229, "villaSale": 128.78778 },
+  { "date": "2024", "place": "yas island", "apartmentSale": 107.440672, "villaSale": 146.993904 },
+  { "date": "2025", "place": "yas island", "apartmentSale": 117.76521, "villaSale": 155.52101 }
+]

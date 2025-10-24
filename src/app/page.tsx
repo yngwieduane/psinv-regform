@@ -8,6 +8,7 @@ import Why from "./_components/Why";
 import Testimonial from "./_components/Testimonial";
 import ListYourPropertySection from "./_components/ListYourPropertySection";
 import FooterListSection from "./_components/FooterListSection";
+import PriceTrends from "./_components/PriceTrends";
 
 export default function Home() {
 return (
@@ -15,11 +16,12 @@ return (
         <Header/>
         <Main/>
         <ListYourPropertySection />
-        <RealEstateMarket/>    
+        <RealEstateMarket/> 
+        <PriceTrends />   
         <AbuDhabiPropertySale/>
         <Why />
         <PerformanceSection />
-        <Testimonial />
+        <Testimonial />        
         <FooterListSection/>
     </>
 );

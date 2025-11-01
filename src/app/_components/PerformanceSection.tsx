@@ -6,11 +6,11 @@ const PerformanceSection = () => {
 
     return(
         <>
-
+        <div className="spacer md:h-[60px] h-[40px]"></div>
         <div className="w-full text-[#fff] relative min-h-screen md:flex justify-between items-center overflow-hidden">                         
            <video
           className="absolute inset-0 w-full h-full object-cover object-center -z-10"
-          src="/video-bg.mp4"
+          src="/performance-auh.mp4"
           autoPlay
           loop
           muted

@@ -202,7 +202,8 @@ const filteredMergedData = mergedData.filter(
                                 <LineChart className="h-full"  data={saleData}  >
                                     <CartesianGrid horizontal={true} vertical={false} stroke="#E5E7EB" strokeDasharray="0" />
                                         <XAxis dataKey="date" tick={{ fill: "#6B7280", fontSize: 12 }} axisLine={false} 
-                                        tickLine={false} interval="preserveStartEnd" />
+                                        tickLine={false} interval="preserveStartEnd"
+                                        tickFormatter={(date) => new Date(date).getFullYear().toString()} />
                                         <YAxis axisLine={false} tick={false}  width={0} tickCount={6} />
                                         <Tooltip />
                                         
@@ -273,6 +274,7 @@ const filteredMergedData = mergedData.filter(
                                         tick={{ fill: "#6B7280", fontSize: 12 }}
                                         axisLine={false}
                                         tickLine={false} interval="preserveStartEnd"
+                                        tickFormatter={(date)=> new Date(date).getFullYear().toString()}
                                         />
                                         <YAxis axisLine={false} tick={false}  width={0} tickCount={6} />
                                         <Tooltip />  
@@ -377,6 +379,7 @@ const filteredMergedData = mergedData.filter(
                                     tick={{ fill: "#6B7280", fontSize: 12 }}
                                     axisLine={false}
                                     tickLine={false} interval="preserveStartEnd"
+                                    tickFormatter={(date)=> new Date(date).getFullYear().toString()}
                                     />
                                     <YAxis yAxisId="left" axisLine={false} tick={false}  width={0} tickCount={6} />
                                     <YAxis yAxisId="right" axisLine={false} tick={false}  width={0} tickCount={6} />

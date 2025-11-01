@@ -31,7 +31,7 @@ export default function RealEstateMarket() {
                     </div>
                 </div>
                 <div className="md:w-1/3 w-full min-h-full">
-                    <img src="/realestate-image.png" alt="Real Estate Image" className="w-full h-full object-cover rounded-xl"/>
+                    <img src="/realestate-image-2.webp" alt="Real Estate Image" className="w-full h-full object-cover object-left rounded-xl"/>
                 </div>
             </div>
         </div>

@@ -6,13 +6,13 @@ const Why = () => {
         <>
         <section id="why-psi"  className="scroll-mt-28">
         <div className="w-full py-10">
-            <div className="container md:flex px-6 md:px-10 mx-auto items-center mb-7">
+            <div className="container md:flex px-6 md:px-8 mx-auto items-center mb-7 gap-5">
                 <div className="md:w-[75%]">
                     <h5 className="text-lg text-[#E35F27] font-semibold mb-3">Trusted Real Estate Experts</h5>
                     <h2 className="md:text-[40px] text-[30px] text-[#272963] font-semibold leading-normal mb-3">Why Partner with Property Shop Investment?</h2>                    
                 </div> 
                 <div className="md:w-[25%]">
-                    <button className="bg-[#E46027] md:text-lg text-md text-[#fff] w-full md:py-5 py-4 px-5 rounded-[100px] font-semibold">Unlock Your Property Potential</button>   
+                    <button className="bg-[#E46027] md:text-md text-md text-[#fff] w-full md:py-5 py-4 px-4 rounded-[100px] font-semibold">Unlock Your Property Potential</button>   
                 </div>            
             </div>
             <div className="container px-6 md:px-10 md:flex mx-auto gap-5 items-center md:space-y-0 space-y-5 items-stretch">                

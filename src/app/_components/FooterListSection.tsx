@@ -35,7 +35,7 @@ export default function FooterListSection() {
     <section id="register" className="relative w-full min-h-screen text-white overflow-hidden flex items-center">
       <video
         className="absolute inset-0 w-full h-full object-cover -z-10"
-        src="/footer-bg.mp4"
+        src="/list-your-prop.mp4"
         autoPlay
         loop
         muted

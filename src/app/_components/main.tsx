@@ -11,7 +11,7 @@ export default function Main() {
     return(
         <main>
             <div
-            className="relative isolate overflow-hidden pt-14 pb-16 sm:pb-20 bg-[url('/main-banner.png')] bg-cover bg-center bg-no-repeat"
+            className="relative isolate overflow-hidden pt-14 pb-16 sm:pb-20 bg-[url('/main-banner-2.webp')] bg-cover bg-center bg-no-repeat"
             >
                 <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/30 to-transparent" />                
                 <div className="lg:pt-30">

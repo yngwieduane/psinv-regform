@@ -6,7 +6,7 @@ const PerformanceSection = () => {
 
     return(
         <>
-        <div className="spacer md:h-[60px] h-[40px]"></div>
+        <div className="spacer md:h-[70px] h-[40px]"></div>
         <div className="w-full text-[#fff] relative min-h-screen md:flex justify-between items-center overflow-hidden">                         
            <video
           className="absolute inset-0 w-full h-full object-cover object-center -z-10"
@@ -19,10 +19,9 @@ const PerformanceSection = () => {
             <div className="absolute inset-0 bg-gradient-to-l from-black/90 via-black/30 to-transparent z-0"></div>  
             <div className="relative z-10 container mx-auto ">       
                 <div className="container lg:flex justify-between mx-auto px-6 md:px-10 items-center mb-7 md:py-60 sm:py-30 py-10">
-                    <div className="md:w-[37%]">
-                        <h2 className="md:text-7xl text-4xl font-medium leading-none mb-7"><strong>Performance</strong><br/>
-                            <span className="font-light">Snapshot</span></h2>                                                   
-                        <p className="md:mb-0 mb-5 opacity-[0.8]">Our recent results highlight strong market performance and operational efficiency</p>  
+                    <div className="md:w-[57%]">
+                        <h2 className="md:text-[50px] text-3xl font-medium leading-none mb-7"><strong>Performance</strong><span className="font-light"> Snapshot</span></h2>                                                   
+                        <p className="md:mb-0 mb-5 opacity-[0.8] text-[16px]">Our recent results highlight strong market performance and operational efficiency</p>  
                     </div>
                     <div className="xl:w-[27%] lg:w-[37%] w-full max-w-[400px] lg-mt-0 mt-5">
                         <div className="blurBox mb-10 relative py-10 px-5 bg-[#ffffff1a] rounded-[8px] border border-1 border-[#ffffff1a] backdrop-blur-[8px] space-y-5">

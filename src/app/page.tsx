@@ -10,12 +10,14 @@ import ListYourPropertySection from "./_components/ListYourPropertySection";
 import FooterListSection from "./_components/FooterListSection";
 import PriceTrends from "./_components/PriceTrends";
 import LoyaltyProgram from "./_components/LoyaltyProgram";
+import Partner from "./_components/Partner";
 
 export default function Home() {
 return (
     <>
         <Header/>
         <Main/>
+        <Partner />
         <ListYourPropertySection />
         <RealEstateMarket/> 
         <PriceTrends />   

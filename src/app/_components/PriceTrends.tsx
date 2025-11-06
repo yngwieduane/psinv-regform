@@ -161,9 +161,9 @@ const filteredMergedData = mergedData.filter(
     return(
         <>
         <section id="price-trends" ref={containerRef}>
-            <div className="mx-auto container px-6 md:px-10 my-10">
+            <div className="mx-auto container px-6 md:px-10 my-10 py-5">
                 <p className="text-lg font-semibold text-[#E35F27] mb-5">A Quick Glimpse</p>
-                <h2 className="text-xl md:text-[40px] font-bold text-[#272963] mb-9 leading-tight capitalize max-w-[1125px]">
+                <h2 className="text-2xl md:text-[40px] font-bold text-[#272963] mb-9 leading-tight capitalize max-w-[1125px]">
                     Price Trends
                 </h2>
                 <div className="lg:flex gap-7 text-[#272963]">

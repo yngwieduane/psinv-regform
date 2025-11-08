@@ -1,16 +1,17 @@
 
 const facts = [
-  { name: 'Al Reem Island', sold: '787', price: '2,702,982' },
-  { name: 'Raha Island', sold: '368', price: '4,342,243' },
-  { name: 'Yas Island', sold: '362', price: '2,470,086' },
-  { name: 'Zayed City', sold: '143', price: '1,707902' },
-  { name: 'Khalifa City', sold: '128', price: '1,656,863' },
-  { name: 'Al Saadiyat Island', sold: '107', price: '7,752,195' },
-  { name: 'Al Bahyah', sold: '93', price: '2,399,932' },
-  { name: 'Al Reef', sold: '83', price: '1,724,197' },
-  { name: 'Al Mariyah Island', sold: '82', price: '941,886' },
-  { name: 'Al Faqa', sold: '63', price: '971,197' }
-]
+  { name: 'Al Reem Island', sold: '20,146'},  
+  { name: 'Yas Island', sold: '17,834' },
+  { name: 'Al Saadiyat Island', sold: '8,881' },
+  { name: 'Al Reef', sold: '6,621' },
+  { name: 'Al Shamkhah', sold: '5,184' }   
+];
+
+const facts2 = [
+  { name: 'Apartment', sold: '45,523'},  
+  { name: 'Villa', sold: '17,576' },
+  { name: 'Townhouse/ Attached Villa', sold: '12,328' }  
+];
 
 export default function AbuDhabiPropertySale() {
 
@@ -33,29 +34,24 @@ export default function AbuDhabiPropertySale() {
                             <div className="flow-root mx-10 md:mx-13 lg:mx-15">
                                 <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                                     <div className="inline-block min-w-full py-2 align-middle sm:px-3 md:px-0 lg:px-8">
-                                        <div className="overflow-hidden shadow-sm outline-1 outline-black/5 sm:rounded-lg ">
+                                      <h3 className="text-xl font-normal text-white mb-5 ">Top 5 Districts with Sold Units in 2025</h3>
+                                      <div className="overflow-hidden shadow-sm outline-1 outline-black/5 sm:rounded-lg mb-5">
                                         <table className="relative min-w-full divide-y divide-gray-300 backdrop-blur-xs">
-                                            <thead className="bg-white/60 backdrop-blur-xs">
-                                            <tr>
-                                                <th
-                                                scope="col"
-                                                className="py-3.5 pr-3 pl-4 text-left text-sm font-normal text-white sm:pl-6"
-                                                >
-                                                Location
-                                                </th>
-                                                <th
-                                                scope="col"
-                                                className="px-3 py-3.5 text-center text-sm font-normal text-white"
-                                                >
-                                                Sold
-                                                </th>
-                                                <th
-                                                scope="col"
-                                                className="px-3 py-3.5 text-center text-sm font-normal text-white"
-                                                >
-                                                Avg. Price (AED)
-                                                </th>
-                                            </tr>
+                                            <thead className="bg-white/60 backdrop-blur-xs">                                                
+                                                <tr>
+                                                    <th
+                                                    scope="col"
+                                                    className="py-3.5 pr-3 pl-4 text-left text-sm font-normal text-white sm:pl-6"
+                                                    >
+                                                    District
+                                                    </th>
+                                                    <th
+                                                    scope="col"
+                                                    className="px-3 py-3.5 text-center text-sm font-normal text-white"
+                                                    >
+                                                    Unit sold
+                                                    </th>                                                
+                                                </tr>
                                             </thead>
                                             <tbody className="divide-y divide-gray-200 divide-white/10 bg-white/50 ">
                                             {facts.map((fact) => (
@@ -65,15 +61,46 @@ export default function AbuDhabiPropertySale() {
                                                 </td>
                                                 <td className="px-3 py-4 text-sm text-center whitespace-nowrap text-white">
                                                     {fact.sold}
-                                                </td>
-                                                <td className="px-3 py-4 text-sm text-center whitespace-nowrap text-white">
-                                                    {fact.price}
-                                                </td>
+                                                </td>                                                
                                                 </tr>
                                             ))}
                                             </tbody>
                                         </table>
-                                        </div>
+                                      </div>
+                                      <h3 className="text-xl font-normal text-white mb-5 ">Breakdown by Property Type(2025)<br />
+                                                    Whar buyers chose most this year</h3>
+                                      <div className="overflow-hidden shadow-sm outline-1 outline-black/5 sm:rounded-lg mb-5">
+                                        <table className="relative min-w-full divide-y divide-gray-300 backdrop-blur-xs">
+                                            <thead className="bg-white/60 backdrop-blur-xs">                                                
+                                                <tr>
+                                                    <th
+                                                    scope="col"
+                                                    className="py-3.5 pr-3 pl-4 text-left text-sm font-normal text-white sm:pl-6"
+                                                    >
+                                                    District
+                                                    </th>
+                                                    <th
+                                                    scope="col"
+                                                    className="px-3 py-3.5 text-center text-sm font-normal text-white"
+                                                    >
+                                                    Unit sold
+                                                    </th>                                                
+                                                </tr>
+                                            </thead>
+                                            <tbody className="divide-y divide-gray-200 divide-white/10 bg-white/50 ">
+                                            {facts2.map((fact) => (
+                                                <tr key={fact.name}>
+                                                <td className="py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap sm:pl-6 text-white">
+                                                    {fact.name}
+                                                </td>
+                                                <td className="px-3 py-4 text-sm text-center whitespace-nowrap text-white">
+                                                    {fact.sold}
+                                                </td>                                                
+                                                </tr>
+                                            ))}
+                                            </tbody>
+                                        </table>
+                                      </div>
                                     </div>
                                 </div>
                             </div>

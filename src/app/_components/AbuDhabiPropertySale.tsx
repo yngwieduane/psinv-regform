@@ -25,10 +25,7 @@ export default function AbuDhabiPropertySale() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-center">
                         <div className="gap-2 flex flex-wrap mx-6 lg:mx-15">
                             <h2 className="text-2xl md:text-[50px] text-white font-semibold ">Abu Dhabi<br/><span className="font-light">Property Sales</span></h2>
-                            <div className="flex flex-wrap justify-start md:gap-3 divide-x divide-[#ffffff50] mt-1 md:mt-10 w-full">
-                                <div className="pl-0 pr-7 py-4 text-lg text-start font-light">Total Market: <span className="font-bold">2,216 units sold</span></div>
-                                <div className="2xl:p-4 pl-0 pb-4 text-lg font-light">Average Price: <span className="font-bold">AED 2.89M</span></div>
-                            </div>
+                            
                         </div>
                         <div>
                             <div className="flow-root mx-10 md:mx-13 lg:mx-15">
